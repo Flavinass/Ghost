@@ -3,54 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost Unseen Strategy </title>
+  <title>Ghost Unseen Strategy</title>
 
-  <meta name="description" content="Ghost Unseen Strategy: Estrategas invisibles para marcas, agencias y empresas que buscan resultados creativos y efectivos. La consultora de estrategia y publicidad que no esperabas ver">
-
-
-<!-- Preload de fuentes -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" as="style">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" as="style">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap" as="style">
-
-<!-- Tipografías -->
-<link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap" rel="stylesheet">
-
-<!-- Script para ocultar hasta que carguen las fuentes -->
-<script>
-  document.documentElement.classList.add('fonts-loading');
-  window.addEventListener('load', () => {
-    document.documentElement.classList.remove('fonts-loading');
-  });
-</script>
-
-<!-- Estilo para ocultar mientras carga -->
-<style>
-  .fonts-loading body {
-    visibility: hidden;
-  }
-</style>
-
-<!-- Codigo anterior -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+  <!-- Mejora velocidad de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Carga TODAS las fuentes en una sola línea -->
+  <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Odibee+Sans&family=Big+Shoulders+Inline+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Opción para evitar FOUT/FOUT (parpadeo de fuentes) -->
+  <style>
+    html { visibility: hidden; }
+    html.wf-active { visibility: visible; }
+  </style>
+  <script>
+    // Marca wf-active cuando cargan las fuentes de Google
+    document.fonts.ready.then(function () {
+      document.documentElement.classList.add('wf-active');
+    });
+  </script>
+  
+  <!-- Tu CSS principal -->
   <link rel="stylesheet" href="estilos.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Odibee+Sans&display=swap" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&display=swap" rel="stylesheet">
-
-
-
   <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" alt="Favicon Ghost">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-
-
-   
+  <!-- (Opcional) Metadescripción para SEO -->
+  <meta name="description" content="Ghost Unseen Strategy: Estrategas invisibles que potencian marcas, agencias y empresas con resultados creativos, rápidos y efectivos.">
 </head>
+
 
 
 <body>
