@@ -1595,3 +1595,11 @@ body {
     padding: 0 0.3rem;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  p.texto-card {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
