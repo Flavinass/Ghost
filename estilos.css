@@ -10,6 +10,7 @@ em {
   font-style: normal;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -1210,4 +1211,387 @@ section {
 
 .frase-contacto a:hover {
   color: white;
+}
+
+
+/* PRUEBA SLIDE CASOS */
+
+/* ----------------------------------------------
+   GENERAL (puedes adaptarlo al resto de tu web)
+---------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f9fbfc;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.casos-header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.casos-header-label {
+  font-size: 1.13rem;
+  color: #222;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin-bottom: 0.08rem;
+}
+.casos-header h2 {
+  font-family: 'Big Shoulders Inline Display', Arial, sans-serif;
+  color: #136d73;
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: .02em;
+  margin: 0 0 1.8rem 0;
+}
+
+/* ----------------------------------------------
+   SLIDER: ESTRUCTURA Y FLECHAS
+---------------------------------------------- */
+.slider-casos-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 540px;
+  gap: 2.1rem;
+  width: 100%;
+  margin: 0 auto 2.5rem auto;
+  position: relative;
+}
+
+.slider-arrow-casos {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(19,109,115,0.13);
+  color: #136d73;
+  font-size: 2.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow .16s, background .18s;
+  z-index: 10;
+  position: relative;
+}
+.slider-arrow-casos:hover {
+  background: #e9f7f6;
+  box-shadow: 0 6px 20px rgba(19,109,115,0.18);
+}
+
+/* ----------------------------------------------
+   TARJETA DEL CASO
+---------------------------------------------- */
+.slider-casos {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 6px 32px 0 rgba(30,90,100,0.09);
+  padding: 2.6rem 3.2rem 2.6rem 2.4rem;
+  max-width: 1120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caso-card-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.2rem;
+  width: 100%;
+}
+.caso-img-col {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 180px;
+  max-width: 240px;
+}
+.caso-img-col img {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  background: transparent;
+  box-shadow: none;
+}
+.caso-text-col {
+  flex: 1 1 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.45rem;
+  padding-top: 0.1rem;
+}
+.caso-titulo-grande {
+  font-family: 'Big Shoulders Inline Display', Arial, sans-serif;
+  font-size: 2.3rem;
+  color: #136d73;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: .10rem;
+  letter-spacing: .01em;
+  line-height: 1.08;
+  text-align: left;
+}
+.caso-titulo-chico {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.15rem;
+  color: #98a73d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  margin-bottom: 1.15rem;
+  text-align: left;
+}
+
+.caso-bloque h3 {
+  color: #98a73d;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 0.13rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  display: inline-block;
+  margin-top: 1.20rem;
+  text-align: left;
+  border-bottom: 2px solid #eef6f6;
+  padding-bottom: 0.15rem;
+}
+.caso-bloque:first-child h3 { margin-top: 0; }
+
+.caso-bloque p {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 1.18rem;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 0.1rem;
+  text-align: left;
+}
+.caso-bloque .destacado {
+  color: #13827d;
+  font-weight: 600;
+}
+
+/* ----------------------------------------------
+   RESPONSIVE
+---------------------------------------------- */
+@media (max-width: 1200px) {
+  .slider-casos {
+    padding: 1.3rem 1rem 1.3rem 0.6rem;
+    max-width: 98vw;
+  }
+  .caso-titulo-grande { font-size: 1.35rem; }
+  .caso-titulo-chico { font-size: .93rem; }
+  .caso-img-col { min-width: 100px; max-width: 120px; }
+  .caso-card-flex { gap: 1rem; }
+}
+@media (max-width: 900px) {
+  .slider-casos { padding: 0.7rem 0.3rem; }
+  .caso-titulo-grande { font-size: 1.1rem; }
+  .caso-titulo-chico { font-size: .80rem; }
+  .caso-img-col { min-width: 68px; max-width: 80px; }
+  .caso-card-flex { gap: 0.6rem; }
+}
+@media (max-width: 650px) {
+  .slider-casos-outer { min-height: unset; gap: 0.3rem; }
+  .slider-casos { min-height: unset; padding: 0.6rem 0.1rem;}
+  .caso-card-flex {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .caso-img-col {
+    width: 90px;
+    max-width: 92vw;
+    min-width: 44px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .caso-img-col img {
+    width: 88px;
+    margin: 0 auto;
+    max-width: 92vw;
+  }
+  .caso-text-col { align-items: flex-start; padding-top: 0.5rem;}
+  .slider-arrow-casos { width: 38px; height: 38px; font-size: 1.13rem;}
+}
+
+
+/* --- NUEVO DISEÑO DE CARD --- */
+
+.caso-card-nueva {
+  max-width: 980px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 2.3em;
+  box-shadow: 0 7px 36px rgba(160,180,190,0.10);
+  padding: 2.6rem 2.4rem 2.2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.caso-card-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.caso-card-img-lado {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.caso-card-titulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caso-titulo-grande {
+  font-family: 'Big Shoulders Inline Display', 'Odibee Sans', Arial, sans-serif;
+  font-size: 2.6rem;
+  color: #247274;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+}
+
+.caso-titulo-badge {
+  display: inline-block;
+  background: #b7c04d;
+  color: #fff;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.25em 1.3em 0.23em 1.3em;
+  border-radius: 2em;
+  margin: 0.12rem 0 0 0;
+  letter-spacing: .02em;
+  box-shadow: 0 1px 7px rgba(160,180,60,0.04);
+  text-transform: uppercase;
+  text-align: left;
+  width: fit-content;
+}
+
+/* Fila 2, contenido ancho completo */
+.caso-card-body {
+  width: 100%;
+  margin-top: 0.3rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.12rem;
+  color: #191919;
+  line-height: 1.5;
+}
+
+.caso-subtitulo {
+  color: #b7c04d;
+  font-size: 1.23rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Poppins', Arial, sans-serif;
+  letter-spacing: 0.01em;
+  display: block;
+  position: relative;
+}
+
+.caso-resaltado {
+  color: #247274;
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .caso-card-nueva {
+    padding: 1.2rem 0.7rem 1.3rem 0.7rem;
+  }
+  .caso-card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .caso-card-img-lado {
+    width: 75px;
+  }
+  .caso-card-titulos {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .caso-titulo-grande {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.caso-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra imagen y títulos */
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.caso-card-titulos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.caso-titulo-grande,
+.caso-titulo-badge {
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .caso-card-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .caso-card-titulos {
+    align-items: center;
+    width: 100%;
+  }
+  .caso-titulo-grande, .caso-titulo-badge {
+    text-align: center;
+  }
+}
+
+/* NUEVO: alineación izquierda del body */
+.caso-card-body {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.12rem;
+  color: #191919;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 750px) {
+  .caso-card-body {
+    width: 100%;
+    padding: 0 0.3rem;
+  }
 }
